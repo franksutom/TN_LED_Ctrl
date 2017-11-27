@@ -1,14 +1,10 @@
 
 #include <SoftwareSerial.h> 
 
-#define CinemaDoorPinRx 2  //影院出入口门模块接收端
-#define CinemaDoorPinTx 3  //影院出入口门模块发射端
-
 #define LEDWallPinRx 8  //墙面LED模块接收端
 #define LEDWallPinTx 7  //墙面LED模块发射端
 
-#define LEDGroundPinRx 11  //地面LED模块接收端
-#define LEDGroundPinTx 10  //地面LED模块发射端
+#define Sensor 10  //红外LED模块发射端
 
 #define TimeoutMax 300000 //超时时间
 
