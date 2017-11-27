@@ -60,14 +60,14 @@ void loop() {
   if(VedioState == "video_stop")
   {
     buttonState = digitalRead(Sensor);
-    if((buttonState == HIGH)&&(cmd == "stop")) //被触发后发播放命令
+    if((buttonState == HIGH)&&(cmd == "stop")) //被触发后发播放命令，不会重复发送
     {
       cmd = "play";
       LEDWallModel.write(playLED,2);
       Serial.println(cmd);
     }
       
-   if((buttonState == LOW)&&(cmd == "play"))  //没有触发后发停止命令
+   if((buttonState == LOW)&&(cmd == "play"))  //没有触发后发停止命令，不会重复发送
    {
       cmd = "stop";
       LEDWallModel.write(stopLED,2);
